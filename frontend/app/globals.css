@@ -1,16 +1,79 @@
 @import "tailwindcss";
 
+@theme {
+  /* Instagram-inspired color palette */
+  --color-ig-blue: #0095F6;
+  --color-ig-blue-dark: #0074CC;
+  --color-ig-purple: #833AB4;
+  --color-ig-purple-dark: #5851DB;
+  --color-ig-purple-deep: #405DE6;
+  --color-ig-magenta: #C13584;
+  --color-ig-pink: #E1306C;
+  --color-ig-red: #FD1D1D;
+  --color-ig-orange: #F56040;
+  --color-ig-orange-light: #F77737;
+  --color-ig-yellow: #FCAF45;
+  --color-ig-yellow-light: #FFDC80;
+
+  /* Dark surface palette */
+  --color-surface-primary: #000000;
+  --color-surface-secondary: #0a0a0a;
+  --color-surface-tertiary: #121212;
+  --color-surface-card: #1a1a1a;
+  --color-surface-elevated: #262626;
+  --color-surface-border: #363636;
+
+  /* Legacy compatibility */
+  --color-circlecare-50: #fce4ec;
+  --color-circlecare-100: #f8bbd0;
+  --color-circlecare-200: #f48fb1;
+  --color-circlecare-300: #f06292;
+  --color-circlecare-400: #E1306C;
+  --color-circlecare-500: #C13584;
+  --color-circlecare-600: #833AB4;
+  --color-circlecare-700: #5851DB;
+  --color-circlecare-800: #405DE6;
+  --color-circlecare-900: #2a2560;
+
+  --color-circlecare-purple-50: #f3e5f5;
+  --color-circlecare-purple-100: #e1bee7;
+  --color-circlecare-purple-200: #ce93d8;
+  --color-circlecare-purple-300: #ba68c8;
+  --color-circlecare-purple-400: #833AB4;
+  --color-circlecare-purple-500: #5851DB;
+  --color-circlecare-purple-600: #405DE6;
+  --color-circlecare-purple-700: #3949AB;
+  --color-circlecare-purple-800: #283593;
+  --color-circlecare-purple-900: #1A237E;
+
+  /* Animations */
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-bounce-gentle: bounce 2s ease-in-out infinite;
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
 @layer base {
   html {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     scroll-behavior: smooth;
   }
-  
+
   body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1e293b 0%, #7c3aed 50%, #ec4899 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 70%, #0a0a0a 100%);
     overflow-x: hidden;
   }
 
@@ -21,7 +84,19 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-400 bg-clip-text text-transparent;
+    background: linear-gradient(45deg, #F77737, #E1306C, #C13584, #833AB4, #5851DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .ig-gradient {
+    background: linear-gradient(45deg, #F77737, #E1306C, #C13584, #833AB4);
+  }
+
+  .ig-gradient-full {
+    background: linear-gradient(45deg, #FCAF45, #F77737, #F56040, #E1306C, #C13584, #833AB4, #5851DB, #405DE6);
+    background-size: 200% 200%;
   }
 
   .glass-effect {
@@ -29,31 +104,36 @@
   }
 
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/25;
+    @apply transition-all duration-300;
   }
 
-  /* KindNest specific components */
+  .hover-glow:hover {
+    box-shadow: 0 0 25px rgba(225, 48, 108, 0.25);
+  }
+
+  /* CircleCare button with Instagram styling */
   .kindnest-button {
     @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg active:scale-95;
-    @apply bg-gradient-to-r from-emerald-500 to-teal-600;
+    background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);
     @apply text-white font-medium rounded-xl px-6 py-3;
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 20px rgba(225, 48, 108, 0.3);
   }
 
   .kindnest-button:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 25px rgba(225, 48, 108, 0.4);
   }
 
   .kindnest-card {
     @apply bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10;
     @apply transition-all duration-300 ease-out;
-    @apply hover:border-emerald-400/30 hover:bg-white/10;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 
   .kindnest-card:hover {
-    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.1);
+    border-color: rgba(225, 48, 108, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(225, 48, 108, 0.1);
     transform: translateY(-2px);
   }
 
@@ -64,18 +144,19 @@
   }
 
   .kindnest-input:focus {
-    @apply outline-none ring-2 ring-emerald-400/50 border-emerald-400;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    @apply outline-none ring-2 border-ig-pink;
+    --tw-ring-color: rgba(225, 48, 108, 0.5);
+    box-shadow: 0 0 0 3px rgba(225, 48, 108, 0.1);
   }
 }
 
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeInAnim 0.6s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUpAnim 0.6s ease-out forwards;
   }
 
   .animate-bounce-gentle {
@@ -83,7 +164,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeInAnim {
   from {
     opacity: 0;
   }
@@ -92,7 +173,7 @@
   }
 }
 
-@keyframes slideUp {
+@keyframes slideUpAnim {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -115,60 +196,60 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Instagram styled */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #10b981, #14b8a6);
+  background: linear-gradient(to bottom, #833AB4, #E1306C, #F77737);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #059669, #0d9488);
+  background: linear-gradient(to bottom, #5851DB, #C13584, #F56040);
 }
 
-/* Custom KindNest styling for RainbowKit */
+/* Instagram-styled RainbowKit */
 [data-rk] .rk-connect-button {
-  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%) !important;
+  background: linear-gradient(135deg, #E1306C 0%, #833AB4 100%) !important;
   border: none !important;
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(225, 48, 108, 0.3) !important;
   transition: all 0.3s ease !important;
   border-radius: 12px !important;
 }
 
 [data-rk] .rk-connect-button:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 6px 25px rgba(225, 48, 108, 0.4) !important;
 }
 
 [data-rk] .rk-account-button {
-  background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%) !important;
+  background: linear-gradient(135deg, #E1306C 0%, #833AB4 100%) !important;
   border: none !important;
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(225, 48, 108, 0.3) !important;
   transition: all 0.3s ease !important;
   border-radius: 12px !important;
 }
 
 [data-rk] .rk-account-button:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 6px 25px rgba(225, 48, 108, 0.4) !important;
 }
 
 /* RainbowKit modal styling */
 [data-rk] .rk-modal-backdrop {
   backdrop-filter: blur(8px) !important;
-  background: rgba(0, 0, 0, 0.6) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
 }
 
 [data-rk] .rk-modal-container {
-  background: rgba(15, 23, 42, 0.95) !important;
+  background: rgba(18, 18, 18, 0.95) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 24px !important;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
@@ -194,12 +275,19 @@
 }
 
 .warm-glow {
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 20px rgba(225, 48, 108, 0.3);
   transition: box-shadow 0.3s ease;
 }
 
 .warm-glow:hover {
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 30px rgba(225, 48, 108, 0.5);
+}
+
+/* Instagram stories-style gradient ring */
+.ig-ring {
+  background: linear-gradient(45deg, #FCAF45, #F77737, #F56040, #E1306C, #C13584, #833AB4);
+  padding: 2px;
+  border-radius: 50%;
 }
 
 /* Group card animations */
@@ -209,5 +297,5 @@
 
 .group-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 20px 40px rgba(225, 48, 108, 0.15);
 }
