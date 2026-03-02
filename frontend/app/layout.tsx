@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     ],
     apple: { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
   },
+  other: {
+    'talentapp:project_verification': 'b14e73cd710be5740be614a0e27010758cbf11fc7a5f154c450710d9d34bbe99187ff1e31b03ba7782844fb32c964e6f0daa60e632290ed733390234b12499a0',
+  },
 };
 
 export default function RootLayout({
