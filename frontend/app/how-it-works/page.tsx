@@ -3,8 +3,8 @@
 import StacksWalletConnect from '@/components/StacksWalletConnect';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { 
-  ArrowLeft, 
+import {
+  ArrowLeft,
   ArrowRight,
   Wallet,
   Users,
@@ -38,7 +38,7 @@ export default function HowItWorks() {
       title: "How To Connect Your Wallet",
       description: "Connect your Web3 wallet to begin your journey of care and community support",
       icon: Wallet,
-      color: "from-blue-500 to-indigo-500",
+      color: "from-ig-purple-deep to-ig-purple",
       details: [
         "Install Leather, Xverse, or Hiro Wallet",
         "Connect to the CircleCare app",
@@ -52,7 +52,7 @@ export default function HowItWorks() {
       title: "Create Your Circle",
       description: "Start a circle of care with a meaningful name and begin inviting those who matter",
       icon: Users,
-      color: "from-circlecare-purple-500 to-pink-500",
+      color: "from-ig-magenta to-ig-pink",
       details: [
         "Click 'Create Circle' on dashboard",
         "Enter a circle name (e.g., 'Family Care Circle')",
@@ -66,7 +66,7 @@ export default function HowItWorks() {
       title: "Invite to Circle",
       description: "Invite friends by adding their wallet addresses with custom nicknames",
       icon: UserPlus,
-      color: "from-circlecare-500 to-circlecare-purple-500",
+      color: "from-ig-pink to-ig-purple",
       details: [
         "Get friends' Stacks wallet addresses",
         "Click 'Invite to Circle' in your circle",
@@ -80,7 +80,7 @@ export default function HowItWorks() {
       title: "Share Care",
       description: "Add shared care with descriptions, amounts, and select participants",
       icon: Receipt,
-      color: "from-orange-500 to-red-500",
+      color: "from-ig-orange to-ig-red",
       details: [
         "Click 'Share Care' in circle",
         "Enter description and amount",
@@ -94,7 +94,7 @@ export default function HowItWorks() {
       title: "See Care Flow",
       description: "See real-time balances showing how care flows through your circle",
       icon: BarChart,
-      color: "from-circlecare-500 to-cyan-500",
+      color: "from-ig-yellow to-ig-orange",
       details: [
         "View your balance on circle page",
         "Positive = care flowing to you",
@@ -108,7 +108,7 @@ export default function HowItWorks() {
       title: "Flow Care Forward",
       description: "Complete the circle with one click directly through the blockchain",
       icon: HandHeart,
-      color: "from-violet-500 to-circlecare-purple-500",
+      color: "from-ig-purple to-ig-purple-dark",
       details: [
         "Click 'Flow Care Forward' when ready",
         "Confirm your contribution in wallet",
@@ -162,13 +162,13 @@ export default function HowItWorks() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -inset-10 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
+        <div className="absolute -inset-10 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-ig-purple rounded-full mix-blend-screen filter blur-xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-ig-pink rounded-full mix-blend-screen filter blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-ig-orange rounded-full mix-blend-screen filter blur-xl animate-pulse delay-2000"></div>
         </div>
       </div>
 
@@ -176,7 +176,7 @@ export default function HowItWorks() {
         {/* Navigation */}
         <nav className="flex items-center justify-between py-6">
           <div className="flex items-center space-x-4">
-            <button 
+            <button
               onClick={() => router.push('/')}
               className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors"
             >
@@ -184,7 +184,7 @@ export default function HowItWorks() {
               <span>Back to Home</span>
             </button>
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-circlecare-500 to-circlecare-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 ig-gradient rounded-lg flex items-center justify-center">
                 <Heart className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">CircleCare</span>
@@ -211,7 +211,7 @@ export default function HowItWorks() {
               const Icon = step.icon;
               const isEven = index % 2 === 0;
               return (
-                <div 
+                <div
                   key={index}
                   className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 lg:gap-16`}
                 >
@@ -230,9 +230,9 @@ export default function HowItWorks() {
                         </div>
                       ))}
                     </div>
-                    <div className="bg-yellow-500/20 backdrop-blur-sm rounded-xl p-4 border border-yellow-500/30">
-                      <p className="text-yellow-200 text-sm">
-                        💡 <strong>Pro Tip:</strong> {step.tips}
+                    <div className="bg-ig-yellow/10 backdrop-blur-sm rounded-xl p-4 border border-ig-yellow/30">
+                      <p className="text-ig-yellow-light text-sm">
+                        <strong>Pro Tip:</strong> {step.tips}
                       </p>
                     </div>
                   </div>
@@ -259,11 +259,11 @@ export default function HowItWorks() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div 
+                <div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-ig-purple to-ig-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -279,7 +279,7 @@ export default function HowItWorks() {
           <h2 className="text-4xl font-bold text-white text-center mb-16">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
               >
@@ -292,13 +292,13 @@ export default function HowItWorks() {
 
         {/* CTA */}
         <div className="py-16 text-center">
-          <div className="bg-gradient-to-r from-circlecare-500/20 via-circlecare-purple-500/20 to-blue-500/20 backdrop-blur-lg rounded-3xl p-12 border border-white/10 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-ig-purple/20 via-ig-pink/20 to-ig-orange/20 backdrop-blur-lg rounded-3xl p-12 border border-white/10 max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-6">Start Your Circle</h2>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
               You&apos;re not alone in this. Connect your wallet and create your first circle of care in under 2 minutes.
             </p>
-            <div className="bg-gradient-to-r from-circlecare-500 to-circlecare-purple-600 p-1 rounded-2xl inline-block">
-              <div className="bg-black/50 backdrop-blur-sm rounded-xl px-8 py-4">
+            <div className="ig-gradient p-[2px] rounded-2xl inline-block">
+              <div className="bg-surface-primary/80 backdrop-blur-sm rounded-[14px] px-8 py-4">
                 <StacksWalletConnect />
               </div>
             </div>
