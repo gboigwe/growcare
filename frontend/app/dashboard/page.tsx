@@ -22,7 +22,7 @@ export default function Dashboard() {
 
   // Debug logging
   useEffect(() => {
-    console.log('📊 Dashboard state:', {
+    console.log('Dashboard state:', {
       address,
       connected,
       userGroupIds,
@@ -56,10 +56,10 @@ export default function Dashboard() {
 
   if (!connected) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary flex items-center justify-center">
         <Card className="p-8">
           <CardContent>
-            <Heart className="h-16 w-16 text-circlecare-500 mx-auto mb-4" />
+            <Heart className="h-16 w-16 text-ig-pink mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-white mb-4 text-center">Connect Your Wallet</h2>
             <p className="text-white/70 mb-6 text-center">Connect your Stacks wallet to access your circles of care</p>
             <div className="flex justify-center">
@@ -72,7 +72,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
+    <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -83,12 +83,12 @@ export default function Dashboard() {
           <div className="flex items-center gap-4">
             <Button
               onClick={() => {
-                console.log('🔄 Manual refresh triggered');
+                console.log('Manual refresh triggered');
                 refetchGroups();
               }}
               variant="outline"
               size="sm"
-              className="bg-circlecare-500/10 text-white border-circlecare-400/30 hover:bg-circlecare-500/20 transition-all duration-200"
+              className="bg-ig-pink/10 text-white border-ig-pink/30 hover:bg-ig-pink/20 transition-all duration-200"
             >
               <RefreshCw className="h-4 w-4 mr-2" />
               Refresh Circles
@@ -148,12 +148,12 @@ export default function Dashboard() {
         <div className="grid gap-6">
           {/* Create Group Card */}
           {!showCreateGroup && (
-            <Card className="border-2 border-dashed border-circlecare-400/30 hover:border-circlecare-500 bg-white/5 backdrop-blur-lg transition-all duration-300 cursor-pointer hover:scale-105">
+            <Card className="border-2 border-dashed border-ig-pink/30 hover:border-ig-pink bg-white/5 backdrop-blur-lg transition-all duration-300 cursor-pointer hover:scale-105">
               <CardContent
                 className="flex flex-col items-center justify-center py-12 text-center"
                 onClick={() => setShowCreateGroup(true)}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-circlecare-500 to-circlecare-purple-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg warm-glow">
+                <div className="w-16 h-16 bg-gradient-to-br from-ig-pink to-ig-purple rounded-2xl flex items-center justify-center mb-4 shadow-lg warm-glow">
                   <Heart className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Create Your Circle</h3>
@@ -165,8 +165,8 @@ export default function Dashboard() {
           {/* User Groups */}
           {groupsLoading ? (
             <div className="text-center py-12">
-              <div className="w-16 h-16 bg-gradient-to-br from-circlecare-500/20 to-circlecare-purple-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4 float-animation">
-                <Heart className="h-8 w-8 text-circlecare-400 animate-pulse" />
+              <div className="w-16 h-16 bg-gradient-to-br from-ig-pink/20 to-ig-purple/20 rounded-3xl flex items-center justify-center mx-auto mb-4 float-animation">
+                <Heart className="h-8 w-8 text-ig-pink animate-pulse" />
               </div>
               <div className="text-white text-lg font-medium mb-2">Finding your circles...</div>
               <div className="text-white/70">Gathering all the places where care flows</div>
@@ -187,8 +187,8 @@ export default function Dashboard() {
           ) : (
             <Card>
               <CardContent className="text-center py-12">
-                <div className="w-20 h-20 bg-gradient-to-br from-circlecare-500/20 to-circlecare-purple-500/20 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <Heart className="h-10 w-10 text-circlecare-400" />
+                <div className="w-20 h-20 bg-gradient-to-br from-ig-pink/20 to-ig-purple/20 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                  <Heart className="h-10 w-10 text-ig-pink" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">No circles yet</h3>
                 <p className="text-white/70 mb-4">Create your first circle to start flowing care</p>
@@ -233,9 +233,9 @@ function GroupCard({
   // Debug logging
   React.useEffect(() => {
     if (groupInfo) {
-      console.log(`🔍 GroupCard ${groupId} - Group Info:`, groupInfo);
-      console.log(`🔍 GroupCard ${groupId} - Name:`, groupInfo.name);
-      console.log(`🔍 GroupCard ${groupId} - Name type:`, typeof groupInfo.name);
+      console.log(`GroupCard ${groupId} - Group Info:`, groupInfo);
+      console.log(`GroupCard ${groupId} - Name:`, groupInfo.name);
+      console.log(`GroupCard ${groupId} - Name type:`, typeof groupInfo.name);
     }
   }, [groupInfo, groupId]);
 
@@ -309,7 +309,7 @@ function GroupCard({
     >
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-white">
-          <Users className="h-5 w-5 text-circlecare-400" />
+          <Users className="h-5 w-5 text-ig-pink" />
           {displayName}
           {isPaused && (
             <span className="ml-auto flex items-center gap-1 text-xs font-medium text-red-400 bg-red-500/20 px-2 py-1 rounded-full">
@@ -322,35 +322,35 @@ function GroupCard({
       <CardContent>
         <div className="space-y-2 text-sm">
           <div className="flex text-white/70 items-center gap-2">
-            <Heart className="h-4 w-4 text-circlecare-400" />
+            <Heart className="h-4 w-4 text-ig-pink" />
             Your Circle #{userGroupIndex} of {totalUserGroups}
           </div>
           <div className="flex text-white/70 items-center gap-2">
-            <Receipt className="h-4 w-4 text-circlecare-400" />
+            <Receipt className="h-4 w-4 text-ig-pink" />
             Created by {formatCreator(groupInfo.creator)}
           </div>
 
           {/* Member Status */}
           {(typeof groupInfo.creator === 'string' ? groupInfo.creator : groupInfo.creator?.value) === userAddress ? (
-            <div className="text-circlecare-400 font-medium flex items-center gap-1">
+            <div className="text-ig-pink font-medium flex items-center gap-1">
               <Heart className="h-4 w-4" />
-              🔵 You started this circle
+              You started this circle
             </div>
           ) : memberInfo ? (
-            <div className="text-circlecare-purple-400 font-medium flex items-center gap-1">
+            <div className="text-ig-purple font-medium flex items-center gap-1">
               <Users className="h-4 w-4" />
-              🤝 You&apos;re part of this circle
+              You&apos;re part of this circle
             </div>
           ) : (
             <div className="text-white/50 font-medium">
-              👀 Not in this circle
+              Not in this circle
             </div>
           )}
 
           {/* Balance Display */}
           {memberInfo && displayBalance !== undefined && (
             <div className="flex items-center gap-2 mt-3 pt-3 border-t border-white/10">
-              <HandHeart className="h-4 w-4 text-circlecare-400" />
+              <HandHeart className="h-4 w-4 text-ig-pink" />
               <span className={`font-medium ${Number(displayBalance) >= 0 ? 'text-green-400' : 'text-red-400'}`}>
                 {Number(displayBalance) >= 0 ? '+' : ''}
                 {formatBalance(displayBalance)} STX
