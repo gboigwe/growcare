@@ -3,13 +3,13 @@
 import StacksWalletConnect from '@/components/StacksWalletConnect';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { 
-  ArrowLeft, 
-  Users, 
-  Shield, 
-  Zap, 
-  TrendingUp, 
-  Globe, 
+import {
+  ArrowLeft,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  Globe,
   Timer,
   Leaf,
   CheckCircle,
@@ -43,7 +43,7 @@ export default function Features() {
         "Gentle invitation system",
         "Real-time care tracking"
       ],
-      color: "from-circlecare-500 to-circlecare-purple-500"
+      color: "from-ig-pink to-ig-purple"
     },
     {
       icon: Shield,
@@ -55,7 +55,7 @@ export default function Features() {
         "Transparent audit trail",
         "Bitcoin-backed security"
       ],
-      color: "from-circlecare-500 to-blue-500"
+      color: "from-ig-purple-deep to-ig-purple"
     },
     {
       icon: Zap,
@@ -67,7 +67,7 @@ export default function Features() {
         "Fast Bitcoin L2 confirmations",
         "Real-time balance updates"
       ],
-      color: "from-amber-500 to-orange-500"
+      color: "from-ig-orange to-ig-yellow"
     },
     {
       icon: TrendingUp,
@@ -79,7 +79,7 @@ export default function Features() {
         "Detailed care history",
         "Smart flow calculations"
       ],
-      color: "from-violet-500 to-circlecare-purple-500"
+      color: "from-ig-magenta to-ig-pink"
     },
     {
       icon: Globe,
@@ -91,7 +91,7 @@ export default function Features() {
         "Cross-border settlements",
         "Multiple wallet support"
       ],
-      color: "from-blue-500 to-indigo-500"
+      color: "from-ig-purple to-ig-purple-dark"
     },
     {
       icon: Timer,
@@ -103,7 +103,7 @@ export default function Features() {
         "Transparent care history",
         "Gentle reminders"
       ],
-      color: "from-cyan-500 to-circlecare-500"
+      color: "from-ig-orange-light to-ig-orange"
     }
   ];
 
@@ -141,13 +141,13 @@ export default function Features() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -inset-10 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000"></div>
+        <div className="absolute -inset-10 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-ig-purple rounded-full mix-blend-screen filter blur-xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-ig-pink rounded-full mix-blend-screen filter blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-ig-orange rounded-full mix-blend-screen filter blur-xl animate-pulse delay-2000"></div>
         </div>
       </div>
 
@@ -155,7 +155,7 @@ export default function Features() {
         {/* Navigation */}
         <nav className="flex items-center justify-between py-6">
           <div className="flex items-center space-x-4">
-            <button 
+            <button
               onClick={() => router.push('/')}
               className="flex items-center space-x-2 text-white hover:text-white/80 transition-colors"
             >
@@ -163,7 +163,7 @@ export default function Features() {
               <span>Back to Home</span>
             </button>
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-circlecare-500 to-circlecare-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 ig-gradient rounded-lg flex items-center justify-center">
                 <Heart className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">CircleCare</span>
@@ -189,9 +189,9 @@ export default function Features() {
             {mainFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div 
+                <div
                   key={index}
-                  className={`bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                  className={`bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-ig-pink/30 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -220,11 +220,11 @@ export default function Features() {
             {technicalFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div 
+                <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-ig-pink/30 transition-all duration-300 hover:scale-105"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-ig-purple to-ig-pink rounded-xl flex items-center justify-center mb-4">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -237,7 +237,7 @@ export default function Features() {
 
         {/* Why Choose CircleCare */}
         <div className="py-16">
-          <div className="bg-gradient-to-r from-circlecare-purple-500/20 via-circlecare-500/20 to-blue-500/20 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
+          <div className="bg-gradient-to-r from-ig-purple/20 via-ig-pink/20 to-ig-orange/20 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
             <h2 className="text-4xl font-bold text-white text-center mb-8">Why Choose CircleCare?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -284,8 +284,8 @@ export default function Features() {
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
             Join the community making care flow in circles with Bitcoin L2-powered transparency
           </p>
-          <div className="bg-gradient-to-r from-circlecare-500 to-circlecare-purple-600 p-1 rounded-2xl inline-block">
-            <div className="bg-black/50 backdrop-blur-sm rounded-xl px-8 py-4">
+          <div className="ig-gradient p-[2px] rounded-2xl inline-block">
+            <div className="bg-surface-primary/80 backdrop-blur-sm rounded-[14px] px-8 py-4">
               <StacksWalletConnect />
             </div>
           </div>
