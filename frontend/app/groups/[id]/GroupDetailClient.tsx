@@ -101,7 +101,7 @@ export default function GroupDetailClient() {
   }, [debtSettled]);
 
   useEffect(() => {
-    console.log('📊 Group Detail Data:', {
+    console.log('Group Detail Data:', {
       groupId,
       groupInfo,
       groupData,
@@ -113,10 +113,10 @@ export default function GroupDetailClient() {
 
   if (!connected) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary flex items-center justify-center">
         <Card className="p-8">
           <CardContent>
-            <Heart className="h-16 w-16 text-circlecare-500 mx-auto mb-4" />
+            <Heart className="h-16 w-16 text-ig-pink mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-white mb-4 text-center">Connect Your Wallet</h2>
             <p className="text-white/70 mb-6 text-center">Connect your Stacks wallet to access this circle</p>
             <div className="flex justify-center">
@@ -160,7 +160,7 @@ export default function GroupDetailClient() {
   // This ensures we show the correct balance even if the query returns 0
   const displayBalance = memberInfo ? calculateBalanceFromMemberInfo() : balance;
 
-  console.log('👤 Membership check:', {
+  console.log('Membership check:', {
     address,
     creator: groupInfo?.creator,
     isCreator,
@@ -169,7 +169,7 @@ export default function GroupDetailClient() {
     isGroupMember
   });
 
-  console.log('💰 Balance check:', {
+  console.log('Balance check:', {
     balance,
     balanceType: typeof balance,
     balanceNumber: Number(balance),
@@ -180,7 +180,7 @@ export default function GroupDetailClient() {
     willShowBalanceCard: isGroupMember && displayBalance !== undefined
   });
 
-  console.log('🔍 MemberInfo details:', {
+  console.log('MemberInfo details:', {
     memberInfoExists: !!memberInfo,
     active: memberInfo?.active,
     totalOwed: memberInfo?.['total-owed'],
@@ -202,7 +202,7 @@ export default function GroupDetailClient() {
       return;
     }
 
-    console.log('💰 Adding expense:', {
+    console.log('Adding expense:', {
       description: expenseDescription,
       amount: expenseAmount,
       participants: selectedParticipants,
@@ -239,12 +239,12 @@ export default function GroupDetailClient() {
       curr.amount > max.amount ? curr : max
     , creditors[0]);
 
-    console.log('💳 Settling debt for group:', groupId, 'Amount:', settlementAmount, 'Creditor:', primaryCreditor.address, 'Debt:', primaryCreditor.amount);
+    console.log('Settling debt for group:', groupId, 'Amount:', settlementAmount, 'Creditor:', primaryCreditor.address, 'Debt:', primaryCreditor.amount);
     settleDebt(primaryCreditor.address, settlementAmount);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800">
+    <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -267,7 +267,7 @@ export default function GroupDetailClient() {
                   size="sm"
                   onClick={() => unpauseGroup()}
                   loading={unpausing}
-                  className="bg-circlecare-500/10 text-circlecare-400 border-circlecare-400/30 hover:bg-circlecare-500/20"
+                  className="bg-ig-pink/10 text-ig-pink border-ig-pink/30 hover:bg-ig-pink/20"
                 >
                   <Unlock className="h-4 w-4 mr-2" />
                   Reopen Circle
@@ -315,13 +315,13 @@ export default function GroupDetailClient() {
         {/* Group Title */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
-            <Users className="h-4 w-4 text-blue-400 mr-2" />
+            <Users className="h-4 w-4 text-ig-purple mr-2" />
             <span className="text-white/90 text-sm font-medium">
               Group #{groupId}
             </span>
             {isPaused && (
               <>
-                <span className="text-white/50 mx-2">•</span>
+                <span className="text-white/50 mx-2">&bull;</span>
                 <Lock className="h-4 w-4 text-red-400 mr-1" />
                 <span className="text-red-400 text-sm font-medium">Closed</span>
               </>
@@ -338,19 +338,19 @@ export default function GroupDetailClient() {
         {/* Balance Card */}
         {isGroupMember && displayBalance !== undefined && (
           <div className="mb-12">
-            <div className={`bg-gradient-to-br ${Number(displayBalance) >= 0 ? 'from-circlecare-500/20 to-circlecare-purple-500/20' : 'from-red-500/20 to-pink-500/20'} backdrop-blur-lg rounded-3xl p-8 border border-white/10`}>
+            <div className={`bg-gradient-to-br ${Number(displayBalance) >= 0 ? 'from-ig-pink/20 to-ig-purple/20' : 'from-red-500/20 to-pink-500/20'} backdrop-blur-lg rounded-3xl p-8 border border-white/10`}>
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">Your Balance</h3>
-                  <p className={`text-4xl font-black mb-3 ${Number(displayBalance) >= 0 ? 'text-circlecare-400' : 'text-red-400'}`}>
+                  <p className={`text-4xl font-black mb-3 ${Number(displayBalance) >= 0 ? 'text-ig-pink' : 'text-red-400'}`}>
                     {Number(displayBalance) >= 0 ? '+' : ''}
                     {formatSTX(displayBalance)} STX
                   </p>
                   <p className="text-white/70 text-lg">
-                    {Number(displayBalance) >= 0 ? '💝 Care flowing to you' : '🤲 Time to flow care forward'}
+                    {Number(displayBalance) >= 0 ? 'Care flowing to you' : 'Time to flow care forward'}
                   </p>
                 </div>
-                <div className={`w-20 h-20 ${Number(displayBalance) >= 0 ? 'bg-circlecare-500' : 'bg-red-500'} rounded-2xl flex items-center justify-center`}>
+                <div className={`w-20 h-20 ${Number(displayBalance) >= 0 ? 'bg-ig-pink' : 'bg-red-500'} rounded-2xl flex items-center justify-center`}>
                   <HandHeart className="h-10 w-10 text-white" />
                 </div>
               </div>
@@ -371,9 +371,9 @@ export default function GroupDetailClient() {
                 onClick={() => setShowAddMember(true)}
                 className="group cursor-pointer transition-all duration-300 hover:scale-105"
               >
-                <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all">
+                <div className="bg-gradient-to-br from-ig-purple-deep/20 to-ig-purple/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-ig-purple/30 transition-all">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-ig-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <UserPlus className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -389,9 +389,9 @@ export default function GroupDetailClient() {
               onClick={() => setShowAddExpense(true)}
               className="group cursor-pointer transition-all duration-300 hover:scale-105"
             >
-              <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all">
+              <div className="bg-gradient-to-br from-ig-magenta/20 to-ig-pink/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-ig-pink/30 transition-all">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-ig-pink rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Plus className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -407,9 +407,9 @@ export default function GroupDetailClient() {
                 onClick={() => setShowSettleDebt(true)}
                 className="group cursor-pointer transition-all duration-300 hover:scale-105"
               >
-                <div className="bg-gradient-to-br from-circlecare-500/20 to-circlecare-purple-500/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all">
+                <div className="bg-gradient-to-br from-ig-orange/20 to-ig-yellow/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-ig-orange/30 transition-all">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-circlecare-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-ig-orange rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                       <CreditCard className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -466,7 +466,7 @@ export default function GroupDetailClient() {
                       type="submit"
                       loading={addingMember}
                       disabled={!memberAddress.trim() || !memberNickname.trim()}
-                      className="bg-gradient-to-r from-blue-500 to-indigo-500"
+                      className="bg-gradient-to-r from-ig-purple-deep to-ig-purple"
                     >
                       {addingMember ? 'Sending Invitation...' : 'Send Invitation'}
                     </Button>
@@ -554,7 +554,7 @@ export default function GroupDetailClient() {
                       type="submit"
                       loading={addingExpense}
                       disabled={!expenseDescription.trim() || !expenseAmount || selectedParticipants.length === 0}
-                      className="bg-gradient-to-r from-purple-500 to-pink-500"
+                      className="bg-gradient-to-r from-ig-magenta to-ig-pink"
                     >
                       {addingExpense ? 'Adding Expense...' : 'Add Expense'}
                     </Button>
@@ -678,7 +678,7 @@ export default function GroupDetailClient() {
             <Card className="bg-white/5 backdrop-blur-lg border-white/10">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-ig-purple rounded-xl flex items-center justify-center">
                     <Users className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -692,7 +692,7 @@ export default function GroupDetailClient() {
             <Card className="bg-white/5 backdrop-blur-lg border-white/10">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-ig-pink rounded-xl flex items-center justify-center">
                     <Receipt className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -737,7 +737,7 @@ export default function GroupDetailClient() {
                       className="flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-circlecare-500 to-circlecare-purple-500 rounded-xl flex items-center justify-center shadow-lg">
+                        <div className="w-10 h-10 bg-gradient-to-br from-ig-pink to-ig-purple rounded-xl flex items-center justify-center shadow-lg">
                           <span className="text-white font-bold text-sm">
                             {member.address.slice(0, 2)}
                           </span>
@@ -746,13 +746,13 @@ export default function GroupDetailClient() {
                           <div className="text-white font-medium">{member.nickname}</div>
                           <div className="text-white/70 text-sm">{shortenAddress(member.address)}</div>
                           {member.address === address && (
-                            <div className="text-circlecare-400 text-sm font-medium flex items-center gap-1">
+                            <div className="text-ig-pink text-sm font-medium flex items-center gap-1">
                               <Heart className="h-3 w-3" />
                               You
                             </div>
                           )}
                           {member.address === groupInfo?.creator && (
-                            <div className="text-circlecare-purple-400 text-sm font-medium flex items-center gap-1">
+                            <div className="text-ig-purple text-sm font-medium flex items-center gap-1">
                               <Heart className="h-3 w-3" />
                               Circle Keeper
                             </div>
@@ -822,7 +822,7 @@ export default function GroupDetailClient() {
                                   <span>Block #{settlement.timestamp}</span>
                                   {isUserInvolved && (
                                     <span className="ml-2 text-emerald-400 font-medium">
-                                      • You {settlement.debtor === address ? 'paid' : 'received'}
+                                      &bull; You {settlement.debtor === address ? 'paid' : 'received'}
                                     </span>
                                   )}
                                 </div>
@@ -854,7 +854,7 @@ export default function GroupDetailClient() {
           <div className="text-center py-16">
             <Card className="bg-white/5 backdrop-blur-lg border-white/10 max-w-2xl mx-auto">
               <CardContent className="p-12">
-                <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                <div className="w-24 h-24 bg-gradient-to-br from-ig-orange to-ig-yellow rounded-3xl flex items-center justify-center mx-auto mb-8">
                   <Users className="h-12 w-12 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">Not a Member Yet</h3>
@@ -863,7 +863,7 @@ export default function GroupDetailClient() {
                 </p>
                 <div className="bg-white/5 rounded-2xl p-4 border border-white/10">
                   <p className="text-white/60 text-sm">
-                    💡 Share this group ID with the creator: <br />
+                    Share this group ID with the creator: <br />
                     <span className="font-mono text-white/80 text-lg">#{groupId}</span>
                   </p>
                 </div>
