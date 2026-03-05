@@ -122,7 +122,7 @@ GrowCare embodies four core pillars:
 - Choose your caring nickname
 - Confirm and watch your circle form ✨
 
-### 3. **Invite to Circle** 🤗
+### 3. **Invite to Circle**
 - Open your circle
 - Click "Invite to Circle" to grow your community
 - Enter their wallet address and a warm nickname
