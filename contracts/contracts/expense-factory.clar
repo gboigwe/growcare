@@ -1,4 +1,4 @@
-;; CircleCare Expense Factory - Clarity 4
+;; GrowCare Expense Factory - Clarity 4
 ;; Creates and manages support groups (nests) on Stacks
 ;; Uses stacks-block-time for timestamp tracking
 

@@ -16,16 +16,16 @@ export function NetworkTest() {
       setStacksTest({ status: 'loading' });
       try {
         const response = await fetch('https://stacks-node-api.testnet.stacks.co/extended/v1/block');
-        
+
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
-        
+
         const data = await response.json();
         if (data.error) {
           throw new Error(data.error);
         }
-        
+
         setStacksTest({
           status: 'success',
           result: `Block: ${data.results?.[0]?.height || 'Unknown'}`,
@@ -49,24 +49,24 @@ export function NetworkTest() {
   if (!connected) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono max-w-xs">
-      <div className="text-orange-400 font-bold mb-2">🔍 Stacks Network Debug</div>
-      
+    <div className="fixed bottom-4 right-4 bg-surface-tertiary/90 backdrop-blur-lg text-white p-4 rounded-xl text-xs font-mono max-w-xs border border-white/10">
+      <div className="text-ig-pink font-bold mb-2">Stacks Network Debug</div>
+
       <div className="space-y-1">
         <div>
-          Network: Stacks Testnet ✅
+          Network: Stacks Testnet
         </div>
-        
+
         <div>
           API Status: {
-            stacksTest.status === 'loading' ? '⏳' :
-            stacksTest.status === 'error' ? `❌ ${stacksTest.error}` :
-            stacksTest.status === 'success' ? `✅ ${stacksTest.result}` :
+            stacksTest.status === 'loading' ? 'Loading...' :
+            stacksTest.status === 'error' ? `Error: ${stacksTest.error}` :
+            stacksTest.status === 'success' ? `OK ${stacksTest.result}` :
             '?'
           }
         </div>
-        
-        <div className="text-orange-300 mt-2">
+
+        <div className="text-ig-orange mt-2">
           Contracts: STDCC18...
         </div>
       </div>

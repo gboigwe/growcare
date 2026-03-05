@@ -1,0 +1,25 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: group-treasury
+            expected-sender: SP3BXJENEWVNCFYGJF75DFS478H1BZJXNZPT84EAD
+            cost: 179450
+            path: contracts/group-treasury.clar
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: expense-factory
+            expected-sender: SP3BXJENEWVNCFYGJF75DFS478H1BZJXNZPT84EAD
+            cost: 90320
+            path: contracts/expense-factory.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"

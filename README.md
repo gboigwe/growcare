@@ -1,4 +1,4 @@
-# 🔵 CircleCare - Where care flows in circles
+# 🔵 GrowCare - Where care flows in circles
 
 *Care-centered expense sharing built on Stacks Bitcoin L2. Fair, transparent, and warm.*
 
@@ -6,11 +6,11 @@
 
 Built for the **Stacks Vibe Coding Hackathon 2025** 🏆
 
-## 🌟 What is CircleCare?
+## 🌟 What is GrowCare?
 
-CircleCare transforms expense sharing from tracking debts into flowing care. Instead of "you owe Alice $50," we recognize that communities operate in **circles of mutual care**—everyone contributes when they can, everyone receives when they need, and support comes full circle.
+GrowCare transforms expense sharing from tracking debts into flowing care. Instead of "you owe Alice $50," we recognize that communities operate in **circles of mutual care**—everyone contributes when they can, everyone receives when they need, and support comes full circle.
 
-Built on Stacks Bitcoin L2 with Clarity smart contracts, CircleCare combines blockchain transparency with human warmth. Every contribution is secured, every moment of care is permanent, and every interaction feels like what it truly is: **caring for each other.**
+Built on Stacks Bitcoin L2 with Clarity smart contracts, GrowCare combines blockchain transparency with human warmth. Every contribution is secured, every moment of care is permanent, and every interaction feels like what it truly is: **caring for each other.**
 
 ---
 
@@ -33,9 +33,9 @@ Built on Stacks Bitcoin L2 with Clarity smart contracts, CircleCare combines blo
 
 ---
 
-## 💝 **CircleCare Brand Philosophy**
+## 💝 **GrowCare Brand Philosophy**
 
-CircleCare embodies four core pillars:
+GrowCare embodies four core pillars:
 
 ### 🌊 **Warm & Flowing**
 *"Care flows in circles."* Support moves naturally through the community, like water finding its course.
@@ -64,7 +64,7 @@ CircleCare embodies four core pillars:
 ### Frontend
 - **Next.js 15** with React 19 for modern experiences
 - **TypeScript** for type safety
-- **Tailwind CSS** with custom CircleCare design system (teal/purple)
+- **Tailwind CSS** with custom GrowCare design system (teal/purple)
 - **Stacks.js** and **Stacks Connect** for seamless Web3
 - **Flowing Animations** with CSS transforms and keyframes
 
@@ -108,10 +108,10 @@ CircleCare embodies four core pillars:
 
 ---
 
-## 🔵 How to Use CircleCare
+## 🔵 How to Use GrowCare
 
 ### 1. **Connect Your Wallet** 💙
-- Open CircleCare in your browser
+- Open GrowCare in your browser
 - Click the teal/purple "Connect Wallet" button
 - Ensure you're on Stacks Testnet
 - *Your wallet is now ready to flow care*
@@ -180,23 +180,23 @@ npm run lint # ESLint
 ## 📂 Project Structure
 
 ```
-circlecare-mvp/
+growcare-mvp/
 ├── contracts/                 # Clarity smart contracts
 │   ├── contracts/
 │   │   ├── groups-treasuri.clar    # Core care & contribution logic
 │   │   └── expensess-factori.clar  # Circle creation & management
 │   └── tests/                 # Contract tests
-├── frontend/                  # CircleCare web application
+├── frontend/                  # GrowCare web application
 │   ├── app/                   # Next.js app router
 │   │   ├── page.tsx           # Landing page with hero
 │   │   ├── dashboard/         # Your circles overview
 │   │   ├── groups/[id]/       # Individual circle management
-│   │   ├── about/             # CircleCare story & values
+│   │   ├── about/             # GrowCare story & values
 │   │   ├── features/          # Features showcase
 │   │   ├── how-it-works/      # Step-by-step guide
-│   │   └── globals.css        # CircleCare design system & animations
+│   │   └── globals.css        # GrowCare design system & animations
 │   ├── components/            # Reusable UI components
-│   │   ├── ui/                # Button, Input, Card with CircleCare styling
+│   │   ├── ui/                # Button, Input, Card with GrowCare styling
 │   │   └── StacksWalletConnect.tsx  # Wallet connection
 │   ├── lib/                   # Web3 hooks, utils, & contract interactions
 │   │   ├── StacksProvider.tsx      # Stacks context provider
@@ -246,7 +246,7 @@ This project was built for the **Stacks Vibe Coding Hackathon 2025** with focus 
 
 ### Key Innovation: Circular Care Model
 
-CircleCare introduces a **circular reciprocity model** that transforms expense tracking from:
+GrowCare introduces a **circular reciprocity model** that transforms expense tracking from:
 - ❌ Linear debts (A owes B, B owes C)
 - ✅ Circular care flows (everyone → circle → everyone)
 
@@ -256,14 +256,14 @@ This isn't just semantic—it's a fundamental reframe of how communities support
 [Link to demo video will be added]
 
 ### Live Demo
-[CircleCare Live](https://circlecare.vercel.app/)
+[GrowCare Live](https://growcare.vercel.app/)
 
 ---
 
 ## 📞 Support
 
 - **Stacks Documentation**: https://docs.stacks.co/
-- **X**: [@CircleCare_xyz](https://x.com/circlecare_xyz)
+- **X**: [@GrowCare_xyz](https://x.com/growcare_xyz)
 - **Issues**: Create an issue in this repository
 
 ---
@@ -294,9 +294,9 @@ This isn't just semantic—it's a fundamental reframe of how communities support
 
 ## 💙 **About This Project**
 
-CircleCare was born from a simple belief: **care works best when it flows in circles, not lines.**
+GrowCare was born from a simple belief: **care works best when it flows in circles, not lines.**
 
-Traditional expense apps track debts. CircleCare tracks how care circulates through your community—fair, transparent, continuous. We chose Stacks Bitcoin L2 because **care this important deserves Bitcoin security.**
+Traditional expense apps track debts. GrowCare tracks how care circulates through your community—fair, transparent, continuous. We chose Stacks Bitcoin L2 because **care this important deserves Bitcoin security.**
 
 Every gradient, every animation, every word is chosen to remind us that behind every wallet address is a human heart. Blockchain's greatest power isn't its technology—it's its ability to help us trust and care for each other.
 
@@ -306,4 +306,4 @@ Every gradient, every animation, every word is chosen to remind us that behind e
 
 **Built with 💜 for the Stacks ecosystem and the Stacks Vibe Coding Hackathon 2025**
 
-**CircleCare** - *Where care comes full circle*
+**GrowCare** - *Where care comes full circle*

@@ -1,6 +1,6 @@
 [project]
 name = 'contracts'
-description = 'CircleCare - Expense Management on Stacks with Clarity 4'
+description = 'GrowCare - Expense Management on Stacks with Clarity 4'
 authors = []
 telemetry = true
 cache_dir = './.cache'

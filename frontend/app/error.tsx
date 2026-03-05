@@ -21,7 +21,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-surface-primary via-surface-tertiary to-surface-primary flex items-center justify-center p-4">
       <Card className="p-8 max-w-md w-full bg-white/5 backdrop-blur-lg border-white/10">
         <CardContent className="text-center">
           <div className="w-20 h-20 bg-red-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -45,7 +45,7 @@ export default function Error({
           <div className="flex flex-col sm:flex-row gap-3 mt-8">
             <Button
               onClick={reset}
-              className="flex-1 bg-gradient-to-r from-circlecare-500 to-circlecare-purple-500"
+              className="flex-1 bg-gradient-to-r from-ig-pink to-ig-purple"
             >
               <RefreshCw className="h-4 w-4 mr-2" />
               Try Again

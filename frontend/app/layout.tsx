@@ -5,26 +5,26 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
   title: {
-    default: 'CircleCare - Collaborative Expense Management on Stacks',
-    template: '%s | CircleCare',
+    default: 'GrowCare - Collaborative Expense Management on Stacks',
+    template: '%s | GrowCare',
   },
-  description: 'Manage group expenses effortlessly with CircleCare. Built on Stacks Bitcoin L2, CircleCare helps communities track contributions, split costs, and build financial transparency through smart contracts.',
+  description: 'Manage group expenses effortlessly with GrowCare. Built on Stacks Bitcoin L2, GrowCare helps communities track contributions, split costs, and build financial transparency through smart contracts.',
   keywords: ['expense management', 'group expenses', 'stacks', 'bitcoin', 'blockchain', 'smart contracts', 'community finance', 'expense splitting'],
-  authors: [{ name: 'CircleCare Team' }],
-  creator: 'CircleCare',
-  publisher: 'CircleCare',
+  authors: [{ name: 'GrowCare Team' }],
+  creator: 'GrowCare',
+  publisher: 'GrowCare',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    title: 'CircleCare - Collaborative Expense Management on Stacks',
-    description: 'Manage group expenses effortlessly with CircleCare. Built on Stacks Bitcoin L2 for transparent community finance.',
-    siteName: 'CircleCare',
+    title: 'GrowCare - Collaborative Expense Management on Stacks',
+    description: 'Manage group expenses effortlessly with GrowCare. Built on Stacks Bitcoin L2 for transparent community finance.',
+    siteName: 'GrowCare',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CircleCare - Collaborative Expense Management on Stacks',
-    description: 'Manage group expenses effortlessly with CircleCare. Built on Stacks Bitcoin L2 for transparent community finance.',
+    title: 'GrowCare - Collaborative Expense Management on Stacks',
+    description: 'Manage group expenses effortlessly with GrowCare. Built on Stacks Bitcoin L2 for transparent community finance.',
   },
   robots: {
     index: true,
@@ -44,6 +44,9 @@ export const metadata: Metadata = {
       { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
     ],
     apple: { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+  },
+  other: {
+    'talentapp:project_verification': 'b14e73cd710be5740be614a0e27010758cbf11fc7a5f154c450710d9d34bbe99187ff1e31b03ba7782844fb32c964e6f0daa60e632290ed733390234b12499a0',
   },
 };
 

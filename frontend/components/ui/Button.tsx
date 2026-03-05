@@ -13,8 +13,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 active:scale-95';
 
     const variants = {
-      default: 'bg-gradient-to-r from-kindnest-500 to-kindnest-teal-600 hover:from-kindnest-600 hover:to-kindnest-teal-700 text-white focus:ring-kindnest-500 shadow-lg hover:shadow-xl warm-glow',
-      outline: 'border-2 border-kindnest-400/30 bg-kindnest-500/10 hover:bg-kindnest-500/20 text-white focus:ring-kindnest-400/50 backdrop-blur-sm',
+      default: 'bg-gradient-to-r from-ig-pink to-ig-purple hover:from-ig-magenta hover:to-ig-purple-dark text-white focus:ring-ig-pink shadow-lg hover:shadow-xl warm-glow',
+      outline: 'border-2 border-ig-pink/30 bg-ig-pink/10 hover:bg-ig-pink/20 text-white focus:ring-ig-pink/50 backdrop-blur-sm',
       ghost: 'text-white hover:bg-white/10 focus:ring-white/50',
       danger: 'bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white focus:ring-red-500 shadow-lg hover:shadow-xl',
     };
@@ -33,7 +33,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {loading && (
-          <div className="mr-2 h-4 w-4 bg-kindnest-300 rounded-full animate-pulse">
+          <div className="mr-2 h-4 w-4 bg-ig-pink/50 rounded-full animate-pulse">
             <Heart className="h-4 w-4 text-white animate-bounce" />
           </div>
         )}
