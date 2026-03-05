@@ -9,7 +9,7 @@ export default function Loading() {
           <Heart className="h-10 w-10 text-ig-pink animate-pulse" />
         </div>
         <LoadingSpinner size="lg" />
-        <p className="text-white text-lg font-medium mt-4">Loading CircleCare...</p>
+        <p className="text-white text-lg font-medium mt-4">Loading GrowCare...</p>
         <p className="text-white/70 text-sm mt-2">Gathering your circles of care</p>
       </div>
     </div>

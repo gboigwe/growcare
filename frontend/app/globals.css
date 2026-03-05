@@ -24,27 +24,27 @@
   --color-surface-border: #363636;
 
   /* Legacy compatibility */
-  --color-circlecare-50: #fce4ec;
-  --color-circlecare-100: #f8bbd0;
-  --color-circlecare-200: #f48fb1;
-  --color-circlecare-300: #f06292;
-  --color-circlecare-400: #E1306C;
-  --color-circlecare-500: #C13584;
-  --color-circlecare-600: #833AB4;
-  --color-circlecare-700: #5851DB;
-  --color-circlecare-800: #405DE6;
-  --color-circlecare-900: #2a2560;
+  --color-growcare-50: #fce4ec;
+  --color-growcare-100: #f8bbd0;
+  --color-growcare-200: #f48fb1;
+  --color-growcare-300: #f06292;
+  --color-growcare-400: #E1306C;
+  --color-growcare-500: #C13584;
+  --color-growcare-600: #833AB4;
+  --color-growcare-700: #5851DB;
+  --color-growcare-800: #405DE6;
+  --color-growcare-900: #2a2560;
 
-  --color-circlecare-purple-50: #f3e5f5;
-  --color-circlecare-purple-100: #e1bee7;
-  --color-circlecare-purple-200: #ce93d8;
-  --color-circlecare-purple-300: #ba68c8;
-  --color-circlecare-purple-400: #833AB4;
-  --color-circlecare-purple-500: #5851DB;
-  --color-circlecare-purple-600: #405DE6;
-  --color-circlecare-purple-700: #3949AB;
-  --color-circlecare-purple-800: #283593;
-  --color-circlecare-purple-900: #1A237E;
+  --color-growcare-purple-50: #f3e5f5;
+  --color-growcare-purple-100: #e1bee7;
+  --color-growcare-purple-200: #ce93d8;
+  --color-growcare-purple-300: #ba68c8;
+  --color-growcare-purple-400: #833AB4;
+  --color-growcare-purple-500: #5851DB;
+  --color-growcare-purple-600: #405DE6;
+  --color-growcare-purple-700: #3949AB;
+  --color-growcare-purple-800: #283593;
+  --color-growcare-purple-900: #1A237E;
 
   /* Animations */
   --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -111,7 +111,7 @@
     box-shadow: 0 0 25px rgba(225, 48, 108, 0.25);
   }
 
-  /* CircleCare button with Instagram styling */
+  /* GrowCare button with Instagram styling */
   .kindnest-button {
     @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg active:scale-95;
     background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);

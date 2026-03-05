@@ -99,7 +99,7 @@ export default function Home() {
             <div className="w-10 h-10 ig-gradient rounded-lg flex items-center justify-center warm-glow">
               <Heart className="h-6 w-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-white">CircleCare</span>
+            <span className="text-2xl font-bold text-white">GrowCare</span>
           </div>
           <div className="hidden md:flex items-center space-x-6 text-white/80">
             <button
@@ -185,7 +185,7 @@ export default function Home() {
         <div className="py-20">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6">
-              Why Choose CircleCare?
+              Why Choose GrowCare?
             </h2>
             <p className="text-xl text-white/70 max-w-2xl mx-auto">
               Care that flows in circles. Fair, transparent, and warm.
@@ -320,7 +320,7 @@ export default function Home() {
               <div className="w-8 h-8 ig-gradient rounded-lg flex items-center justify-center">
                 <Heart className="h-5 w-5 text-white" />
               </div>
-              <span className="text-white font-semibold">CircleCare</span>
+              <span className="text-white font-semibold">GrowCare</span>
             </div>
             <div className="text-white/60 text-center md:text-right">
               <p className="mb-1">Built for the Stacks Vibe Coding Hackathon 2025</p>

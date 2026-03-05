@@ -41,7 +41,7 @@ export default function HowItWorks() {
       color: "from-ig-purple-deep to-ig-purple",
       details: [
         "Install Leather, Xverse, or Hiro Wallet",
-        "Connect to the CircleCare app",
+        "Connect to the GrowCare app",
         "Switch to Stacks Testnet",
         "Your wallet is now ready!"
       ],
@@ -144,7 +144,7 @@ export default function HowItWorks() {
 
   const faqs = [
     {
-      question: "Do I need cryptocurrency to use CircleCare?",
+      question: "Do I need cryptocurrency to use GrowCare?",
       answer: "Yes, you need a small amount of STX on Stacks Testnet for transaction fees. The fees are extremely low thanks to Bitcoin L2 technology."
     },
     {
@@ -152,7 +152,7 @@ export default function HowItWorks() {
       answer: "All care contributions are recorded permanently on the blockchain. While we can't force payment, the transparent record creates accountability."
     },
     {
-      question: "Can I use CircleCare without a Stacks wallet?",
+      question: "Can I use GrowCare without a Stacks wallet?",
       answer: "No, a Stacks wallet is required as it's your identity and payment method on Bitcoin L2. Leather and Xverse are popular options."
     },
     {
@@ -187,7 +187,7 @@ export default function HowItWorks() {
               <div className="w-8 h-8 ig-gradient rounded-lg flex items-center justify-center">
                 <Heart className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">CircleCare</span>
+              <span className="text-xl font-bold text-white">GrowCare</span>
             </div>
           </div>
           <StacksWalletConnect />

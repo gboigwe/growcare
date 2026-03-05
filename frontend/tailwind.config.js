@@ -32,7 +32,7 @@ module.exports = {
           border: '#363636',
         },
         // Legacy compatibility aliases
-        circlecare: {
+        growcare: {
           50: '#fce4ec',
           100: '#f8bbd0',
           200: '#f48fb1',
@@ -44,7 +44,7 @@ module.exports = {
           800: '#405DE6',
           900: '#2a2560',
         },
-        'circlecare-purple': {
+        'growcare-purple': {
           50: '#f3e5f5',
           100: '#e1bee7',
           200: '#ce93d8',

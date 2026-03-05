@@ -71,7 +71,7 @@ export function useCreateGroup() {
         anchorMode: AnchorMode.Any,
         postConditionMode: PostConditionMode.Allow,
         appDetails: {
-          name: 'CircleCare',
+          name: 'GrowCare',
           icon: typeof window !== 'undefined' ? window.location.origin + '/favicon.svg' : '',
         },
         onFinish: async (data: any) => {
@@ -254,7 +254,7 @@ export function useAddMember(groupId?: number) {
         anchorMode: AnchorMode.Any,
         postConditionMode: PostConditionMode.Allow,
         appDetails: {
-          name: 'CircleCare',
+          name: 'GrowCare',
           icon: typeof window !== 'undefined' ? window.location.origin + '/favicon.svg' : '',
         },
         onFinish: async (data: any) => {
@@ -357,7 +357,7 @@ export function useAddExpense(groupId?: number) {
         anchorMode: AnchorMode.Any,
         postConditionMode: PostConditionMode.Allow,
         appDetails: {
-          name: 'CircleCare',
+          name: 'GrowCare',
           icon: typeof window !== 'undefined' ? window.location.origin + '/favicon.svg' : '',
         },
         onFinish: async (data: any) => {
@@ -458,7 +458,7 @@ export function useSettleDebt(groupId?: number) {
         anchorMode: AnchorMode.Any,
         postConditionMode: PostConditionMode.Allow,
         appDetails: {
-          name: 'CircleCare',
+          name: 'GrowCare',
           icon: typeof window !== 'undefined' ? window.location.origin + '/favicon.svg' : '',
         },
         onFinish: async (data: any) => {
@@ -617,7 +617,7 @@ export function usePauseGroup(groupId?: number) {
         anchorMode: AnchorMode.Any,
         postConditionMode: PostConditionMode.Allow,
         appDetails: {
-          name: 'CircleCare',
+          name: 'GrowCare',
           icon: typeof window !== 'undefined' ? window.location.origin + '/favicon.svg' : '',
         },
         onFinish: async (data: any) => {
@@ -708,7 +708,7 @@ export function useUnpauseGroup(groupId?: number) {
         anchorMode: AnchorMode.Any,
         postConditionMode: PostConditionMode.Allow,
         appDetails: {
-          name: 'CircleCare',
+          name: 'GrowCare',
           icon: typeof window !== 'undefined' ? window.location.origin + '/favicon.svg' : '',
         },
         onFinish: async (data: any) => {

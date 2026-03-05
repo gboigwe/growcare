@@ -1,4 +1,4 @@
-;; CircleCare Group Treasury - Clarity 4
+;; GrowCare Group Treasury - Clarity 4
 ;; Expense Management with stacks-block-time timestamps
 ;; Handles expenses, settlements, and member balances for all groups
 

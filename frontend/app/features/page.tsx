@@ -166,7 +166,7 @@ export default function Features() {
               <div className="w-8 h-8 ig-gradient rounded-lg flex items-center justify-center">
                 <Heart className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">CircleCare</span>
+              <span className="text-xl font-bold text-white">GrowCare</span>
             </div>
           </div>
           <StacksWalletConnect />
@@ -178,7 +178,7 @@ export default function Features() {
             Small Acts, Shared Purpose
           </h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-            Discover what makes CircleCare the warmest way to support each other. Every feature designed with empathy and care.
+            Discover what makes GrowCare the warmest way to support each other. Every feature designed with empathy and care.
           </p>
         </div>
 
@@ -235,10 +235,10 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Why Choose CircleCare */}
+        {/* Why Choose GrowCare */}
         <div className="py-16">
           <div className="bg-gradient-to-r from-ig-purple/20 via-ig-pink/20 to-ig-orange/20 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
-            <h2 className="text-4xl font-bold text-white text-center mb-8">Why Choose CircleCare?</h2>
+            <h2 className="text-4xl font-bold text-white text-center mb-8">Why Choose GrowCare?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Traditional Apps</h3>
@@ -258,7 +258,7 @@ export default function Features() {
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">CircleCare</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">GrowCare</h3>
                 <div className="space-y-3">
                   {[
                     "Decentralized & trustless",
