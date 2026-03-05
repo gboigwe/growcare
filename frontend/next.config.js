@@ -23,9 +23,6 @@ const nextConfig = {
     } : false,
   },
 
-  // Further bundle optimizations
-  swcMinify: true, // Use SWC for minification (faster)
-
   // Optimize React in production
   reactStrictMode: true,
 
@@ -40,11 +37,8 @@ const nextConfig = {
     ],
   },
 
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false, net: false, tls: false };
-    config.externals.push('pino-pretty', 'lokijs', 'encoding');
-    return config;
-  },
+  // Server external packages (Turbopack-compatible)
+  serverExternalPackages: ['pino-pretty', 'lokijs', 'encoding'],
 }
 
 module.exports = nextConfig
